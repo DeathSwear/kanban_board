@@ -46,7 +46,7 @@ class _KanbanBoardScreenState extends State<KanbanBoardScreen> {
                       item: SizedBox(
                         width: 260,
                         child: Card(
-                          color: Colors.grey[200],
+                          color: const Color.fromARGB(255, 201, 211, 214),
                           key: ValueKey(task.id),
                           child: Padding(
                             padding: const EdgeInsets.all(12),
