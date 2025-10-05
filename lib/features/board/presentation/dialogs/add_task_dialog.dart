@@ -7,7 +7,6 @@ Future<void> showAddTaskDialog(
   String? initialColumnId,
 }) async {
   final titleController = TextEditingController();
-  final descController = TextEditingController();
 
   await showDialog(
     context: parentContext,
@@ -20,10 +19,6 @@ Future<void> showAddTaskDialog(
               TextField(
                 controller: titleController,
                 decoration: const InputDecoration(labelText: 'Title'),
-              ),
-              TextField(
-                controller: descController,
-                decoration: const InputDecoration(labelText: 'Description'),
               ),
             ],
           ),
@@ -41,11 +36,7 @@ Future<void> showAddTaskDialog(
                 if (blocState is KanbanLoaded) {
                   final target = initialColumnId ?? blocState.columns.first.id;
                   parentContext.read<KanbanBloc>().add(
-                    KanbanAddTask(
-                      columnId: target,
-                      title: title,
-                      description: descController.text.trim(),
-                    ),
+                    KanbanAddTask(columnId: target, title: title),
                   );
                 }
 

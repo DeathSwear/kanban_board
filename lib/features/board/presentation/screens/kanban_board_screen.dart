@@ -24,7 +24,7 @@ class _KanbanBoardScreenState extends State<KanbanBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: const Color.fromARGB(255, 34, 34, 34),
       appBar: const KanbanBoardAppBar(),
       body: BlocBuilder<KanbanBloc, KanbanState>(
         builder: (context, state) {

@@ -9,7 +9,7 @@ class KanbanBoardAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.black54,
+      backgroundColor: const Color.fromARGB(255, 25, 25, 25),
       title: const Text('Kanban Board', style: TextStyle(color: Colors.white)),
       actions: [
         IconButton(
