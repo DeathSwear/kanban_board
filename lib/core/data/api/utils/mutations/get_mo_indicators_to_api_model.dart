@@ -20,7 +20,7 @@ List<ApiBoardColumnModel> transformToBoardColumns(List<dynamic> rows) {
   for (final columnId in columnIds) {
     final parent = byId[columnId];
 
-    final columnName = parent?.name ?? "ROOT";
+    final columnName = parent?.name ?? columnId;
 
     final children = childrenMap[columnId] ?? [];
 
